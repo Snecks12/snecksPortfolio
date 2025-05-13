@@ -662,6 +662,10 @@ label{
   .contact-options {
     padding: 1rem;
   }
+ .contact-header{
+   max-width: 100%;
+   font-size: 10px;
+ }
 }
 .contact-header{
   display: flex;
@@ -677,6 +681,7 @@ label{
 .contact-header {
   animation: contact-header 10s infinite;
 }
+
 
 /* Custom keyframes: animate in first 4%, then stay still */
 @keyframes contact-header {
