@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .section {
+        display: none;
+    }
+    .section.active {
+        display: block;
+    }
+    .nav-link.active {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="nav-link active" data-section="home"> home</a>
+        <a href="#" class="nav-link" data-section="about">about</a>
+        <a href="#" class="nav-link" data-section="contact">contact</a>
+    </nav>
+<!------------------------------------->
+<section id = "home" class = "section">
+    <div class = "container">
+    <h1>hellow hellow</h1>
+    </div>
+</section>
+<!-------------------------------------> 
+<section id = "about" class = "section">
+    <div class = "container">
+        
+    </div>
+</section>
+<!------------------------------------->
+<section id = "contact" class = "section">
+    <div class = "container">
+    <h1>hello</h1>    
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Navigation functionality
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all links and sections
+            navLinks.forEach(l => l.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+
+            // Show corresponding section
+            const sectionId = this.getAttribute('data-section');
+            document.getElementById(sectionId).classList.add('active');
+        });
+
+    });
+});
+</script>
+</body>
+</html>
