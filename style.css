@@ -613,7 +613,6 @@ label{
   justify-content: center;
   align-items: center;
   width: 60%;
-  background-color: black;
   height: 50vh;
   flex-direction: column;
   height: 80vh;
@@ -648,43 +647,65 @@ label{
 	}
 }
 
-@media (max-width: 480px) {
-  .contact-mother {
+@media (max-width: 780px) {
+  .contact-mother{
     flex-direction: column;
     align-items: center;
+    height: 100vh;
+    margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
-
-  .contact-options,
-  .contact-container {
-    width: 100%;
+  .contact-container{
+    width: 80%;
+    height: 50vh;
+    margin-top: -220px;
   }
-
-  .contact-options {
-    padding: 1rem;
-  }
- .contact-header{
-   max-width: 100%;
-   font-size: 10px;
- }
-}
-.contact-header{
+  .contact-options{
+  width: 100%;
+  background-color: black;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  }
+  input, textarea,label{
+  width: 100%;              /* Full width inside their container */
+  max-width: 100%;          /* Prevent overflow */
+  box-sizing: border-box;   /* Include padding in width calculation */
+  font-size: 1rem;
+  font-family: sans-serif;
+  padding: 0.75rem;
+  line-height: 1.4;
   color: #00c8ff;
-  font-size: 50px;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  font-style: normal;
+  background-color: black;
+  }
+  textarea {
+  min-height: 120px;        /* Ensures good space for messages */
+  resize: vertical;
+  color: white;        /* Allow vertical resizing only */
 }
-
-.contact-header {
-  animation: contact-header 10s infinite;
+  .form-group{
+    max-width: 100%;
+    display:flex;
+    justify-content: center;
+  }
+  .status, .success{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    position: relative;
+    left: 250px;
+    top: -400px;
+  }
+  .contact-header{
+    font-size: 20p;
+    margin-top: 100px;
+  }
 }
-
-
-/* Custom keyframes: animate in first 4%, then stay still */
-@keyframes contact-header {
+  @keyframes contact-header {
   0% {
     letter-spacing: -0.5em;
     filter: blur(12px);
@@ -699,6 +720,43 @@ label{
     letter-spacing: 0;
     filter: blur(0);
     opacity: 1;
+    font-size: 30px;
+  }
+}
+.contact-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00c8ff;
+  font-size: 50px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  height: 25vh;
+  background-color: black;
+}
+
+.contact-header {
+  animation: contact-header 10s infinite;
+}
+
+/* Custom keyframes: animate in first 4%, then stay still */
+@keyframes contact-header {
+  0% {
+    letter-spacing: -0.1em;
+    filter: blur(100px);
+    opacity: 0;
+  }
+   10% {
+    letter-spacing: 0;
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: 0;
+    filter: blur(0);
+    opacity: 1;
+    font-size: 50px;
   }
 }
 
