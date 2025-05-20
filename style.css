@@ -75,12 +75,6 @@ nav {
   z-index: -1;
 }
 
-#contact2:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-  height: 100%;
-  width: 100%;
-}
 @media (max-width: 768px) {
   .contactDiv {
     margin-left: 0;
