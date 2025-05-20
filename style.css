@@ -64,16 +64,6 @@ nav {
   padding: 10px 20px;
 }
 
-#contact2::before {
-  background: #00c8ff;
-  content: "";
-  inset: 0;
-  position: absolute;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s ease-in-out;
-  z-index: -1;
-}
 
 @media (max-width: 768px) {
   .contactDiv {
